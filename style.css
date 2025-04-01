@@ -1,0 +1,210 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(2,0,36);
+	background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(121,9,32,1) 44%, rgba(255,8,62,1) 100%);
+    /*  https://cssgradient.io/  */
+    font-size: 16px;
+}
+
+header {
+    background-color: #ff7c01;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+section {
+    padding: 2em;
+    background-color: #ffd779;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2em auto;
+    width: 80%;
+}
+
+.about img {
+    max-width: 400px;
+    float: left;
+    margin-right: 1em;
+}
+
+#sobre, .sobre {
+    padding: 2em;
+    background-color: #ffd779;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2em auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre h2 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+}
+
+.sobre img {
+    width: 25%; /* Aumenta o tamanho da imagem em 50% */
+    margin-right: 1em;
+}
+
+/* sobre */
+
+/*serviÃ§os */
+
+.servicos div {
+    display: flex; /* Define o container como flexÃ­vel */
+    justify-content: space-around; /* Distribui os serviÃ§os uniformemente */
+    flex-wrap: wrap; /* Permite que os serviÃ§os quebrem para a prÃ³xima linha em telas menores */
+}
+
+.servicos div > div {
+    width: 45%; /* Define a largura dos serviÃ§os */
+    margin-bottom: 20px; /* Adiciona espaÃ§o entre os serviÃ§os */
+}
+
+@media (max-width: 768px) {
+    .servicos div > div {
+        width: 100%; /* Define a largura dos serviÃ§os para 100% em telas menores */
+    }
+}
+/* serviÃ§os*/
+
+
+/* projetos */
+
+.projetos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projeto {
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+.projeto img {
+    max-width: 100%;
+    height: auto;
+    border: 0.1px solid black;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Adiciona uma transiÃ§Ã£o suave */
+
+}
+
+.projeto img:hover {
+    transform: scale(1.8); /* Amplia a imagem em 10% quando o mouse estÃ¡ sobre ela */
+    cursor: pointer; /* Muda o cursor para um ponteiro, indicando que a imagem Ã© clicÃ¡vel */
+    border: 0.1px solid black;
+}
+
+#skills h2 {
+    text-align: center;
+}
+
+#skills h3 {
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+.skill {
+    padding: 0.5em 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #ccb8d6;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.rgb-text {
+    font-size: 1em;
+    animation: rgb-animation 5s linear infinite; /* Aplica a animaÃ§Ã£o */
+}
+
+@keyframes rgb-animation {
+    0% { color: rgb(255, 0, 0); } /* Vermelho */
+    16% { color: rgb(255, 165, 0); } /* Laranja */
+    33% { color: rgb(255, 255, 0); } /* Amarelo */
+    50% { color: rgb(0, 128, 0); } /* Verde */
+    66% { color: rgb(0, 0, 255); } /* Azul */
+    83% { color: rgb(75, 0, 130); } /* Anil */
+    100% { color: rgb(238, 130, 238); } /* Violeta */
+}
+
+.rgb-border {
+    padding: 20px;
+    border: 1px solid; /* Inicializa a borda */
+    animation: rgb-border-animation 5s linear infinite; /* Aplica a animaÃ§Ã£o */
+}
+
+@keyframes rgb-border-animation {
+    0% { border-color: rgb(255, 0, 0); } /* Vermelho */
+    16% { border-color: rgb(255, 165, 0); } /* Laranja */
+    33% { border-color: rgb(255, 255, 0); } /* Amarelo */
+    50% { border-color: rgb(0, 128, 0); } /* Verde */
+    66% { border-color: rgb(0, 0, 255); } /* Azul */
+    83% { border-color: rgb(75, 0, 130); } /* Anil */
+    100% { border-color: rgb(238, 130, 238); } /* Violeta */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .projeto,
+    .skill {
+        width: 100%;
+    }
+}
